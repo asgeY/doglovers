@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class SignInViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var emailTextfield: UITextField!
     
     @IBOutlet weak var passwordTextfield: UITextField!
+    
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +37,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         }
         return true
     }
-
+    
+    @IBAction func signInButtonOnClick(_ sender: Any) {
+        
+    }
+    
 }

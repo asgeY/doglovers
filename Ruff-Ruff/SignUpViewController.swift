@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -28,9 +29,9 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: Any) {
-        var _:Void = Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in}
-        var ref = FirebaseDatabase.Database().reference()
-        let userReference = ref.child("Users ")
+        
+        let ref:DatabaseReference! = Database.database().reference()
+        ref.child("users").childByAutoId().setValue(["username": usernameTextField.text, "email":emailTextField.text])
     }
     
     

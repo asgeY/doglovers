@@ -43,6 +43,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SignInButtonOnClick:" destination="s8u-gj-MI1" eventType="touchUpInside" id="Htp-1z-2Zj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -90,6 +93,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="lQ0-sp-aNJ" id="35H-nt-QJP"/>
                         <outlet property="passwordTextfield" destination="UNb-fB-x5p" id="snT-Wv-GEu"/>
+                        <outlet property="signInButton" destination="cI0-jH-3nC" id="eJS-QG-LcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-ug-nSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,6 +187,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="9O2-mu-dYF" id="2vV-ML-btV"/>
                         <outlet property="passwordTextField" destination="8Ql-EC-765" id="ugI-4w-MVS"/>
+                        <outlet property="usernameTextField" destination="0zj-MF-b4h" id="OCZ-dM-BON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkr-rL-dpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
