@@ -40,11 +40,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="ME6-mB-bDw"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Sign In">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="SignInButtonOnClick:" destination="s8u-gj-MI1" eventType="touchUpInside" id="Htp-1z-2Zj"/>
+                                            <action selector="SignInButton_TouchUpInside:" destination="s8u-gj-MI1" eventType="touchUpInside" id="MGS-Nj-Tmb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -94,6 +94,7 @@
                         <outlet property="emailTextfield" destination="lQ0-sp-aNJ" id="35H-nt-QJP"/>
                         <outlet property="passwordTextfield" destination="UNb-fB-x5p" id="snT-Wv-GEu"/>
                         <outlet property="signInButton" destination="cI0-jH-3nC" id="eJS-QG-LcZ"/>
+                        <segue destination="iX7-8S-Yrs" kind="presentation" identifier="onToTheHome" id="7EA-Tb-eED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-ug-nSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,6 +194,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkr-rL-dpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="841.52923538230891"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6W9-63-1Jd">
+            <objects>
+                <viewController id="iX7-8S-Yrs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hoZ-xG-qIh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ahR-x4-wZW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ro-wH-DFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="495"/>
         </scene>
     </scenes>
     <resources>

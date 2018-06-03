@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 class SignInViewController: UIViewController, UITextFieldDelegate{
     
@@ -24,6 +24,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func SignInButton_TouchUpInside(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: {(user,error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            self.performSegue(withIdentifier: "onToTheHome", sender: nil)
+        })
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -38,8 +46,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         return true
     }
     
-    @IBAction func signInButtonOnClick(_ sender: Any) {
-        
-    }
+    
     
 }
