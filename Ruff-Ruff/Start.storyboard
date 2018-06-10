@@ -44,13 +44,13 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="SignInButton_TouchUpInside:" destination="s8u-gj-MI1" eventType="touchUpInside" id="MGS-Nj-Tmb"/>
+                                            <action selector="signInClicked:" destination="s8u-gj-MI1" eventType="touchUpInside" id="ISI-Cz-8Hi"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruff Ruff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bJ-Qn-S4e">
-                                <rect key="frame" x="104" y="238" width="166" height="72"/>
+                                <rect key="frame" x="104.5" y="238" width="166" height="72"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="45"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,11 +61,11 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Kjf-gY-D52" kind="presentation" id="yXw-n3-bQe"/>
+                                    <action selector="signUpClicked:" destination="s8u-gj-MI1" eventType="touchUpInside" id="gEg-iE-A0W"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ruff_Ruff_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-Gi-TOa">
-                                <rect key="frame" x="112" y="71" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="71" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Th0-S6-sDQ"/>
                                     <constraint firstAttribute="width" secondItem="eyi-Gi-TOa" secondAttribute="height" multiplier="1:1" id="u0h-Wf-7jn"/>
@@ -93,8 +93,8 @@
                     <connections>
                         <outlet property="emailTextfield" destination="lQ0-sp-aNJ" id="35H-nt-QJP"/>
                         <outlet property="passwordTextfield" destination="UNb-fB-x5p" id="snT-Wv-GEu"/>
-                        <outlet property="signInButton" destination="cI0-jH-3nC" id="eJS-QG-LcZ"/>
                         <segue destination="iX7-8S-Yrs" kind="presentation" identifier="onToTheHome" id="7EA-Tb-eED"/>
+                        <segue destination="Kjf-gY-D52" kind="show" identifier="signUpClicked" id="K7V-SG-HeF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBp-ug-nSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,14 +110,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ruff_Ruff_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4KM-gd-yyk">
-                                <rect key="frame" x="112" y="71" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="71" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="F2U-EV-3Mz"/>
                                     <constraint firstAttribute="height" constant="150" id="Rht-dk-frc"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xr3-em-Pek">
-                                <rect key="frame" x="30" y="360" width="315" height="194"/>
+                                <rect key="frame" x="30" y="360" width="315" height="130"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zj-MF-b4h">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -137,19 +137,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Biq-cy-q8e">
-                                        <rect key="frame" x="0.0" y="150" width="315" height="44"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="ts6-R8-zrJ"/>
-                                        </constraints>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signUpButton:" destination="Kjf-gY-D52" eventType="touchUpInside" id="gX3-TK-tV3"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOt-iv-p14">
@@ -162,11 +149,30 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruff Ruff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-UG-ZPb">
-                                <rect key="frame" x="104" y="238" width="166" height="72"/>
+                                <rect key="frame" x="104.5" y="238" width="166" height="72"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="45"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dz-I3-mT7">
+                                <rect key="frame" x="30" y="507" width="315" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Biq-cy-q8e">
+                                <rect key="frame" x="30" y="561" width="315" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButton:" destination="Kjf-gY-D52" eventType="touchUpInside" id="gX3-TK-tV3"/>
+                                    <segue destination="iX7-8S-Yrs" kind="show" identifier="SignUp" id="cOf-0o-BEn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24812650680541992" green="0.099744684994220734" blue="0.70166522264480591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -186,6 +192,7 @@
                         <viewLayoutGuide key="safeArea" id="DRk-3d-mDI"/>
                     </view>
                     <connections>
+                        <outlet property="confirmpasswordTextField" destination="4dz-I3-mT7" id="OvP-KH-V3Y"/>
                         <outlet property="emailTextField" destination="9O2-mu-dYF" id="2vV-ML-btV"/>
                         <outlet property="passwordTextField" destination="8Ql-EC-765" id="ugI-4w-MVS"/>
                         <outlet property="usernameTextField" destination="0zj-MF-b4h" id="OCZ-dM-BON"/>
@@ -195,23 +202,43 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="841.52923538230891"/>
         </scene>
-        <!--View Controller-->
+        <!--Main ScreenVC-->
         <scene sceneID="6W9-63-1Jd">
             <objects>
-                <viewController id="iX7-8S-Yrs" sceneMemberID="viewController">
+                <viewController id="iX7-8S-Yrs" customClass="MainScreenVC" customModule="Ruff_Ruff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hoZ-xG-qIh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-Of-hYX">
+                                <rect key="frame" x="121" y="601" width="132" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="iX7-8S-Yrs" eventType="touchUpInside" id="RtZ-99-9IB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43577688240000001" blue="0.42554301319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2l5-Of-hYX" firstAttribute="leading" secondItem="ahR-x4-wZW" secondAttribute="leading" constant="121" id="38n-jE-p2W"/>
+                            <constraint firstItem="ahR-x4-wZW" firstAttribute="bottom" secondItem="2l5-Of-hYX" secondAttribute="bottom" constant="20" id="8J5-kc-tuZ"/>
+                            <constraint firstItem="ahR-x4-wZW" firstAttribute="trailing" secondItem="2l5-Of-hYX" secondAttribute="trailing" constant="122" id="Liy-nE-8tz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ahR-x4-wZW"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ro-wH-DFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="495"/>
+            <point key="canvasLocation" x="1101.5999999999999" y="494.30284857571218"/>
         </scene>
     </scenes>
     <resources>
         <image name="Ruff_Ruff_Logo" width="577" height="577"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7EA-Tb-eED"/>
+    </inferredMetricsTieBreakers>
 </document>
