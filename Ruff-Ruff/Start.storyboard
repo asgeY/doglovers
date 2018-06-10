@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WyI-Fe-ixe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s8u-gj-MI1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,19 +211,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-Of-hYX">
-                                <rect key="frame" x="121" y="601" width="132" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="LOGOUT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutClicked:" destination="iX7-8S-Yrs" eventType="touchUpInside" id="RtZ-99-9IB"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vgL-Jq-4g9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lLa-Ga-2hX">
                                     <size key="itemSize" width="375" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -242,16 +232,30 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsv-ol-J9N">
-                                                    <rect key="frame" x="0.0" y="136" width="375" height="46"/>
+                                                    <rect key="frame" x="0.0" y="146" width="375" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="us2-oO-Ewt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tonks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SL3-cB-IYN">
-                                                                <rect key="frame" x="15" y="8" width="51" height="24"/>
+                                                                <rect key="frame" x="8" y="6" width="56" height="24"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-mA-rYp">
+                                                                <rect key="frame" x="104" y="8" width="18" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tix-hb-7rT">
+                                                                <rect key="frame" x="130" y="9" width="40" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -269,20 +273,46 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.43577688240000001" blue="0.42554301319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2l5-Of-hYX" firstAttribute="leading" secondItem="ahR-x4-wZW" secondAttribute="leading" constant="121" id="38n-jE-p2W"/>
-                            <constraint firstItem="ahR-x4-wZW" firstAttribute="bottom" secondItem="2l5-Of-hYX" secondAttribute="bottom" constant="20" id="8J5-kc-tuZ"/>
+                            <constraint firstItem="vgL-Jq-4g9" firstAttribute="leading" secondItem="ahR-x4-wZW" secondAttribute="leading" id="0TS-fu-pQV"/>
                             <constraint firstItem="vgL-Jq-4g9" firstAttribute="bottom" secondItem="ahR-x4-wZW" secondAttribute="bottom" id="8Sb-CD-Uru"/>
-                            <constraint firstItem="ahR-x4-wZW" firstAttribute="trailing" secondItem="2l5-Of-hYX" secondAttribute="trailing" constant="122" id="Liy-nE-8tz"/>
+                            <constraint firstItem="vgL-Jq-4g9" firstAttribute="bottom" secondItem="ahR-x4-wZW" secondAttribute="bottom" id="DRc-MB-Onb"/>
+                            <constraint firstItem="vgL-Jq-4g9" firstAttribute="top" secondItem="ahR-x4-wZW" secondAttribute="top" id="EaA-Nn-8VH"/>
                             <constraint firstItem="vgL-Jq-4g9" firstAttribute="leading" secondItem="ahR-x4-wZW" secondAttribute="leading" id="Lof-5O-46E"/>
                             <constraint firstItem="vgL-Jq-4g9" firstAttribute="trailing" secondItem="ahR-x4-wZW" secondAttribute="trailing" id="fG6-pv-1tv"/>
+                            <constraint firstItem="vgL-Jq-4g9" firstAttribute="trailing" secondItem="ahR-x4-wZW" secondAttribute="trailing" id="weK-gw-dug"/>
                             <constraint firstItem="vgL-Jq-4g9" firstAttribute="top" secondItem="ahR-x4-wZW" secondAttribute="top" id="zzo-Ak-I9n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ahR-x4-wZW"/>
                     </view>
                     <navigationItem key="navigationItem" id="fA8-U8-J5y">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Ruff_Ruff_Logo" id="Q4J-Qh-Re1"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="aC5-Ad-s4s">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fWI-mw-KwF">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="bRo-GE-cpG">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2l5-Of-hYX">
+                                    <rect key="frame" x="227" y="0.0" width="132" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-84" maxY="0.0"/>
+                                    <state key="normal" title="Logout">
+                                        <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="logoutClicked:" destination="iX7-8S-Yrs" eventType="touchUpInside" id="RtZ-99-9IB"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="Ruff_Ruff_Logo" id="Q4J-Qh-Re1">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-22" maxY="0.0"/>
+                                <color key="tintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="vgL-Jq-4g9" id="sKD-v8-JFL"/>
