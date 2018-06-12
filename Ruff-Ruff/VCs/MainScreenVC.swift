@@ -12,20 +12,31 @@ import KeychainSwift
 
 class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // Get a reference to the storage service using the default Firebase App
+    let storage = FIRStorage.storage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
+        
+        
+        
+        
+
+        loadImages()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    func loadImages(){
+        //let gsReference = storage.reference(forURL: "gs://<your-firebase-storage-bucket>/images/stars.jpg")
+    }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 8
@@ -36,12 +47,39 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath )
         
-        //cell.imageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath )
+        let imageCell = cell.viewWithTag(1) as! UIImageView
+        
+        
+        
+        
+        let storageRef = storage.reference()
+        //storageRef.child(filename)
+        
+        let downloadFile = storageRef.child("images.jpeg")
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        downloadFile.data(withMaxSize: 1000000, completion: { (data, error) in
+            if error != nil {
+                print(" we couldnt download the img")
+            } else {
+                if let imgData = data {
+                    if let img = UIImage(data: imgData) {
+                        imageCell.image = img
+                    }
+                }
+            }
+            
+        })
+
+        
+        
+        
+        imageCell.image = UIImage(named: "dog1")
         return cell
     }
-    
+     
 
 
     @IBAction func logoutClicked(_ sender: Any) {

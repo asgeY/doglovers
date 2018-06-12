@@ -9,6 +9,10 @@ target 'Ruff-Ruff' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'KeychainSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
+
 
   # Pods for Ruff-Ruff
 
