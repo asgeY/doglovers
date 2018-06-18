@@ -18,7 +18,6 @@
 		31941DB220CCBC2400595473 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31941DAF20CCBC2400595473 /* MainScreenVC.swift */; };
 		5C29C1EB4AF02F4D602AEDC4 /* Pods_Ruff_Ruff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5381BC040D06D1559E16DB5 /* Pods_Ruff_Ruff.framework */; };
 		6E67438120CCE9AC00FE9E50 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */; };
-		6E67438320CE391900FE9E50 /* PetImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E67438220CE391900FE9E50 /* PetImages.swift */; };
 		6E74C0DE20C0DA0600446BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74C0DD20C0DA0600446BCD /* AppDelegate.swift */; };
 		6E74C0E520C0DA0800446BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E74C0E420C0DA0800446BCD /* Assets.xcassets */; };
 		6E74C0E820C0DA0800446BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E74C0E620C0DA0800446BCD /* LaunchScreen.storyboard */; };
@@ -28,6 +27,10 @@
 		6E74C11220C0E8D500446BCD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74C11120C0E8D500446BCD /* SignInViewController.swift */; };
 		6E74C11420C0E92700446BCD /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E74C11320C0E92700446BCD /* Start.storyboard */; };
 		6E74C11820C0EA0500446BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E74C11720C0EA0500446BCD /* GoogleService-Info.plist */; };
+		6E9657F120D374AB00027CCC /* ParentMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9657F020D374AB00027CCC /* ParentMainVC.swift */; };
+		6E9657F320D38D2200027CCC /* userData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9657F220D38D2200027CCC /* userData.swift */; };
+		6E9657F520D39A0F00027CCC /* dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9657F420D39A0F00027CCC /* dog.swift */; };
+		6E9657F720D4DFFC00027CCC /* FirebaseImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9657F620D4DFFC00027CCC /* FirebaseImporter.swift */; };
 		72FFAE891B9AF88440B2A3FD /* Pods_Ruff_RuffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E541DA95BB7BA50E2385F176 /* Pods_Ruff_RuffTests.framework */; };
 		AC0D31AD37BE3640D8943D12 /* Pods_Ruff_RuffUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08E32B30D887E4093FD1170 /* Pods_Ruff_RuffUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,7 +61,6 @@
 		648810674401C1D745FDB7BE /* Pods-Ruff-RuffUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ruff-RuffUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ruff-RuffUITests/Pods-Ruff-RuffUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C702A2C70A56D91BFA0C7BC /* Pods-Ruff-Ruff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ruff-Ruff.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ruff-Ruff/Pods-Ruff-Ruff.release.xcconfig"; sourceTree = "<group>"; };
 		6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		6E67438220CE391900FE9E50 /* PetImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetImages.swift; sourceTree = "<group>"; };
 		6E74C0DA20C0DA0600446BCD /* Ruff-Ruff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruff-Ruff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E74C0DD20C0DA0600446BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E74C0E420C0DA0800446BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +76,10 @@
 		6E74C11120C0E8D500446BCD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6E74C11320C0E92700446BCD /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		6E74C11720C0EA0500446BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E9657F020D374AB00027CCC /* ParentMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentMainVC.swift; sourceTree = "<group>"; };
+		6E9657F220D38D2200027CCC /* userData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userData.swift; sourceTree = "<group>"; };
+		6E9657F420D39A0F00027CCC /* dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog.swift; sourceTree = "<group>"; };
+		6E9657F620D4DFFC00027CCC /* FirebaseImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImporter.swift; sourceTree = "<group>"; };
 		C08E32B30D887E4093FD1170 /* Pods_Ruff_RuffUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ruff_RuffUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D027CAF76B09745182DEA94E /* Pods-Ruff-RuffTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ruff-RuffTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ruff-RuffTests/Pods-Ruff-RuffTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5381BC040D06D1559E16DB5 /* Pods_Ruff_Ruff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ruff_Ruff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,10 +135,13 @@
 			isa = PBXGroup;
 			children = (
 				6E74C11120C0E8D500446BCD /* SignInViewController.swift */,
+				6E9657F020D374AB00027CCC /* ParentMainVC.swift */,
 				6E74C10F20C0E8CE00446BCD /* SignUpViewController.swift */,
 				31941DAF20CCBC2400595473 /* MainScreenVC.swift */,
-				6E67438220CE391900FE9E50 /* PetImages.swift */,
 				6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */,
+				6E9657F220D38D2200027CCC /* userData.swift */,
+				6E9657F420D39A0F00027CCC /* dog.swift */,
+				6E9657F620D4DFFC00027CCC /* FirebaseImporter.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -434,9 +443,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E74C11020C0E8CE00446BCD /* SignUpViewController.swift in Sources */,
-				6E67438320CE391900FE9E50 /* PetImages.swift in Sources */,
 				6E74C0DE20C0DA0600446BCD /* AppDelegate.swift in Sources */,
+				6E9657F520D39A0F00027CCC /* dog.swift in Sources */,
 				6E74C11220C0E8D500446BCD /* SignInViewController.swift in Sources */,
+				6E9657F120D374AB00027CCC /* ParentMainVC.swift in Sources */,
+				6E9657F720D4DFFC00027CCC /* FirebaseImporter.swift in Sources */,
+				6E9657F320D38D2200027CCC /* userData.swift in Sources */,
 				6E67438120CCE9AC00FE9E50 /* CollectionViewCell.swift in Sources */,
 				31941DB020CCBC2400595473 /* MainScreenVC.swift in Sources */,
 				31941DAB20CCB73300595473 /* User.swift in Sources */,
@@ -619,7 +631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ruff-Ruff";
+				PRODUCT_BUNDLE_IDENTIFIER = com.barkshare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ruff-Ruff";
+				PRODUCT_BUNDLE_IDENTIFIER = com.barkshare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

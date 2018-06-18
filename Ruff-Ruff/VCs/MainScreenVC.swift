@@ -11,8 +11,6 @@ import Firebase
 import KeychainSwift
 
 class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
-
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -22,20 +20,9 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
-        
-
-        loadImages()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-    
-    func loadImages(){
-        //let gsReference = storage.reference(forURL: "gs://<your-firebase-storage-bucket>/images/stars.jpg")
+        
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
@@ -53,7 +40,7 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
         
         
         
-        
+        /*
         let storageRef = storage.reference()
         //storageRef.child(filename)
         
@@ -66,17 +53,23 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
             } else {
                 if let imgData = data {
                     if let img = UIImage(data: imgData) {
-                        imageCell.image = img
+                        //imageCell.image = img
                     }
                 }
             }
             
-        })
+        })*/
 
         
+        //let data = userData()
+        //imageCell.image = UIImage(named: "dog1")
         
         
-        imageCell.image = UIImage(named: "dog1")
+        //var fb = FirebaseImporter()
+        let data = userData()
+        //imageCell.image = fb.getDataFromFirebase()
+        imageCell.image = data.getUserImage()
+        //data.setDescription(description: "Yo wassup ?")
         return cell
     }
      
