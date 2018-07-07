@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 import KeychainSwift
 
-let DB_BASE = FIRDatabase.database().reference()
+let DB_BASE = Database.database().reference()
 
 class DataSerivce{
     private var _keyChain = KeychainSwift()

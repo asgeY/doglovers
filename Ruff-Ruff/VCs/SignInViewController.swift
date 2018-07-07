@@ -24,7 +24,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
             let user  = User()
             user.uid = keyChain.get("uid")
             print("This is the uid of the user \(user.uid!)")
-            performSegue(withIdentifier: "onToTheHome", sender: nil)
+            performSegue(withIdentifier: "option", sender: nil)
         }
     }
     //End
@@ -45,11 +45,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func signInClicked(_ sender: Any) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {  //Setting variables equal to text passed in
-             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {               //if there is no error
-                    self.completeSignIn(id: user!.uid)
+                    self.completeSignIn(id: Auth.auth().currentUser!.uid)
                     print("Signed IN")
-                    self.performSegue(withIdentifier: "onToTheHome", sender: nil)
+                    self.performSegue(withIdentifier: "option", sender: nil)
                 }
              })
         }//End of 1st if

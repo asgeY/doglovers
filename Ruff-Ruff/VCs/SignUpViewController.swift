@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidAppear(_ animated: Bool) {
         let keyChain = DataSerivce().keyChain
         if keyChain.get("uid") != nil{
-            performSegue(withIdentifier: "SignUp", sender: nil)
+            performSegue(withIdentifier: "moreDetails", sender: nil)
         }
     }
     
@@ -55,17 +55,21 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    
+    
     @IBAction func signUpButton(_ sender: Any) {
         if(passwordTextField.text == confirmpasswordTextField.text){
             
             if let email = emailTextField.text, let password = passwordTextField.text, let username = usernameTextField.text { //Setting pass and email to variables
                
-                FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in  //Creating User
+                Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in  //Creating User
                          if error != nil {                                  // If Error is not null
                             print("cant sign in user")
                             }
                          else {                                                 //Else User Creation
-                                guard let uid = user?.uid
+                                guard let uid = user?.user.uid
                                     else{
                                             return
                                             }
@@ -82,7 +86,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
          func registerUserIntoDatabaseWithUID(uid: String, values: [String: AnyObject]){
             //Saving user in DataBase Name and Email
-            let ref = FIRDatabase.database().reference(fromURL: "https://ruff-ruff.firebaseio.com/")
+            let ref = Database.database().reference(fromURL: "https://ruff-ruff.firebaseio.com/")
             let usersFolder = ref.child("users").child((uid)) //creates users folder and inside of that creates another folder of users UID
             
             usersFolder.updateChildValues(values, withCompletionBlock: { (err, ref) in //means that update name and email inside the users/UID folder

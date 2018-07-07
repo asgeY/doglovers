@@ -14,14 +14,18 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let storage = Storage.storage().reference()
+    
     // Get a reference to the storage service using the default Firebase App
-    let storage = FIRStorage.storage()
+    //let storage = FIRStorage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+       
         
     }
     
@@ -74,16 +78,16 @@ class MainScreenVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
      
 
-
     @IBAction func logoutClicked(_ sender: Any) {
-        let firebaseAuth = FIRAuth.auth()
+        let firebaseAuth = Auth.auth()
         do{
-            try firebaseAuth?.signOut()
+            try firebaseAuth.signOut()
         } catch let signOutError as NSError{
             print("Sign Out error: %@", signOutError )
         }
         DataSerivce().keyChain.delete("uid")
         dismiss(animated: true, completion: nil)
+        //performSegue(withIdentifier: "backToSignIn", sender: (Any).self)
         
     }
     
