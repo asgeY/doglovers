@@ -15,14 +15,16 @@ class dog{
     let ref:DatabaseReference = Database.database().reference()
     let storageRef = Storage.storage().reference()
     
+    
+    
     var dogName:String
-    var dogAge:Int
+    var dogAge:String
     var dogBreed:String
     var dogVaccination:Array<String>
     var dogImage: Array<UIImage>
     var tipsTricks: Array<String> /// the logo should be similar to a bone.
     
-    init(dogName:String,dogAge:Int,dogBreed:String,dogVaccination:Array<String>?,dogImage:Array<UIImage>?,tipsTricks:Array<String>?) {
+    init(dogName:String,dogAge:String,dogBreed:String,dogVaccination:Array<String>?,dogImage:Array<UIImage>?,tipsTricks:Array<String>?) {
         self.dogName = dogName
         self.dogAge = dogAge
         self.dogBreed = dogBreed
@@ -33,7 +35,7 @@ class dog{
     
     init() {
         self.dogName = ""
-        self.dogAge = 0
+        self.dogAge = ""
         self.dogBreed = ""
         self.dogVaccination = []
         self.dogImage = []
@@ -44,7 +46,7 @@ class dog{
         return self.dogName
     }
     
-    func getDogAge() -> Int {
+    func getDogAge() -> String {
         
         return dogAge
     }
@@ -56,8 +58,7 @@ class dog{
     }
     
     
-    func setDogAge(dogAge:Int) -> Void {
-        self.dogAge = dogAge
+    func setDogAge(dogAge:String) -> Void {
         self.ref.child("users/\(Auth.auth().currentUser!.uid)/dogs/\(dogName)/age").setValue(dogAge)
     }
     

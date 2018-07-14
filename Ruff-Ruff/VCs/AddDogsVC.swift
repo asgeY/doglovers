@@ -44,9 +44,7 @@ class AddDogsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         let newDog:dog = dog()
         newDog.setDogName(dogName: dogName.text!)
         newDog.setDogBreed(dogBreed: dogBreed.text!)
-        if(dogAge.text! != ""){
-            newDog.setDogAge(dogAge: Int (dogAge.text!)!)
-        }
+        newDog.setDogAge(dogAge: dogAge.text!)
         newDog.setDogImage(dogImage: dogImage)
         dismiss(animated: true, completion: nil)
     }

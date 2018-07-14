@@ -18,18 +18,67 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
 
     @IBOutlet weak var test: UIImageView!
     
+    let dummy = ["asdf","dgh", "wert"]
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    let dogData:dog = dog()
-    let dogs:Array<dog> = []
+    var dogs:Array<dog> = []
     let dogImage:Array<UIImage> = []
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).child("dogs").observe(.childAdded) { (snapshot) in
+            //print(snapshot)
+            let dogData = dog()
+            let value = snapshot.value as? NSDictionary
+            dogData.dogName = value?["name"] as? String ?? ""
+            dogData.dogBreed = value?["breed"] as? String ?? ""
+            dogData.dogAge = value?["age"] as? String ?? ""
+            
+            //print(self.user.use)
+            //self.users.append(user)
+            print("printing name:" + dogData.dogName)
+            print("sgdf")
+            
+            self.dogs.append(dogData)
+            self.collectionView!.reloadData()
+        }
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        //print(dogs[0].dogName)
+        //print(dogs[1].dogName)
+        //dogs.count
+    }
+
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        print(dogs.count)
+        return self.dogs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+        var data = self.dogs[indexPath.row]
+        //print(data.dogName)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         let imageView = cell.viewWithTag(1) as! UIImageView
+        let nameLabel = cell.viewWithTag(2) as! UILabel
+        let locationLabel = cell.viewWithTag(3) as! UILabel
+        let ageLabel = cell.viewWithTag(4) as! UILabel
+        let distanceLabel = cell.viewWithTag(5) as! UILabel
+        let priceLabel = cell.viewWithTag(6) as! UILabel
+        
+        nameLabel.text = data.dogName
+        ageLabel.text = data.dogAge
+        
+
+        
         var image:UIImage?
         
         // Create a reference to the file you want to download
@@ -50,20 +99,15 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
         }
         
         
+        
+        
         //imageView.sd_setImage(with: reference, placeholderImage: placeholderImage)
         
-        
+        cell.reloadInputViews()
         return cell
     }
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-    }
     
     
     @IBAction func logoutClicked(_ sender: Any) {

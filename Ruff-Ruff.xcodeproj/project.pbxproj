@@ -19,6 +19,7 @@
 		5C29C1EB4AF02F4D602AEDC4 /* Pods_Ruff_Ruff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5381BC040D06D1559E16DB5 /* Pods_Ruff_Ruff.framework */; };
 		6E23D5C720D7675E00FFEA0E /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23D5C620D7675E00FFEA0E /* UserDetailViewController.swift */; };
 		6E4B14CE20E5E7A900AFA73F /* PetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B14CD20E5E7A900AFA73F /* PetDetailsViewController.swift */; };
+		6E5D9EB820F7184F001C7C5C /* FirebaseImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D9EB720F7184F001C7C5C /* FirebaseImporter.swift */; };
 		6E67438120CCE9AC00FE9E50 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */; };
 		6E74C0DE20C0DA0600446BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74C0DD20C0DA0600446BCD /* AppDelegate.swift */; };
 		6E74C0E520C0DA0800446BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E74C0E420C0DA0800446BCD /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		6C702A2C70A56D91BFA0C7BC /* Pods-Ruff-Ruff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ruff-Ruff.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ruff-Ruff/Pods-Ruff-Ruff.release.xcconfig"; sourceTree = "<group>"; };
 		6E23D5C620D7675E00FFEA0E /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		6E4B14CD20E5E7A900AFA73F /* PetDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsViewController.swift; sourceTree = "<group>"; };
+		6E5D9EB720F7184F001C7C5C /* FirebaseImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImporter.swift; sourceTree = "<group>"; };
 		6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6E74C0DA20C0DA0600446BCD /* Ruff-Ruff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruff-Ruff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E74C0DD20C0DA0600446BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		31941DAE20CCBBE300595473 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				6E5D9EB420F70E62001C7C5C /* Supporting Codes */,
 				6E74C11120C0E8D500446BCD /* SignInViewController.swift */,
 				6E23D5C620D7675E00FFEA0E /* UserDetailViewController.swift */,
 				6E74C10F20C0E8CE00446BCD /* SignUpViewController.swift */,
@@ -149,6 +152,7 @@
 				6E67438020CCE9AC00FE9E50 /* CollectionViewCell.swift */,
 				6E9657F220D38D2200027CCC /* userData.swift */,
 				6E9657F420D39A0F00027CCC /* dog.swift */,
+				6E5D9EB720F7184F001C7C5C /* FirebaseImporter.swift */,
 				6EDC7F1F20F1E74500EFF1C0 /* OptionVC.swift */,
 				6E4B14CD20E5E7A900AFA73F /* PetDetailsViewController.swift */,
 				6EDC7F1920EF400600EFF1C0 /* ParentMainViewController.swift */,
@@ -166,6 +170,13 @@
 				C08E32B30D887E4093FD1170 /* Pods_Ruff_RuffUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E5D9EB420F70E62001C7C5C /* Supporting Codes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Codes";
 			sourceTree = "<group>";
 		};
 		6E74C0D120C0DA0600446BCD = {
@@ -462,6 +473,7 @@
 				6EDC7F1C20EF48A200EFF1C0 /* AddDogsVC.swift in Sources */,
 				6E74C0DE20C0DA0600446BCD /* AppDelegate.swift in Sources */,
 				6E23D5C720D7675E00FFEA0E /* UserDetailViewController.swift in Sources */,
+				6E5D9EB820F7184F001C7C5C /* FirebaseImporter.swift in Sources */,
 				6E4B14CE20E5E7A900AFA73F /* PetDetailsViewController.swift in Sources */,
 				6E9657F520D39A0F00027CCC /* dog.swift in Sources */,
 				6E74C11220C0E8D500446BCD /* SignInViewController.swift in Sources */,
