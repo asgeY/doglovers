@@ -683,6 +683,10 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qSh-G3-ePA">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Y9Y-3h-uGk" appends="YES" id="pf2-Sc-rLl"/>
+                                                    </connections>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-7g-GLC">
                                                     <rect key="frame" x="0.0" y="153" width="375" height="57"/>
@@ -694,8 +698,8 @@
                                                                 <rect key="frame" x="8" y="8" width="99.5" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mickey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbY-Qu-GQd">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="26.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="26.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -804,6 +808,7 @@
                         <viewLayoutGuide key="safeArea" id="Xaa-vT-o3R"/>
                     </view>
                     <navigationItem key="navigationItem" id="7DC-eW-7gw">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="cFX-i2-V1c">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SFZ-EQ-jQS">
                                 <rect key="frame" x="16" y="7" width="78" height="30"/>
@@ -814,6 +819,11 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dF7-y1-a0Z">
+                            <rect key="frame" x="164.5" y="7" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="dHP-HF-CWH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9ph-Rn-8YW">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -833,6 +843,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZU-Lj-0oo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y9Y-3h-uGk"/>
             </objects>
             <point key="canvasLocation" x="2656.8000000000002" y="92.203898050974516"/>
         </scene>

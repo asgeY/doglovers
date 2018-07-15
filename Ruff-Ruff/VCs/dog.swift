@@ -22,15 +22,18 @@ class dog{
     var dogBreed:String
     var dogVaccination:Array<String>
     var dogImage: Array<UIImage>
+    var dogImageRef:Array<String>
     var tipsTricks: Array<String> /// the logo should be similar to a bone.
     
-    init(dogName:String,dogAge:String,dogBreed:String,dogVaccination:Array<String>?,dogImage:Array<UIImage>?,tipsTricks:Array<String>?) {
+    init(dogName:String,dogAge:String,dogBreed:String,dogVaccination:Array<String>?,dogImage:Array<UIImage>?,dogImageRef:Array<String>,tipsTricks:Array<String>?) {
         self.dogName = dogName
         self.dogAge = dogAge
         self.dogBreed = dogBreed
         self.dogVaccination = dogVaccination!
         self.dogImage = dogImage!
         self.tipsTricks = tipsTricks!
+        self.dogImageRef = dogImageRef
+        
     }
     
     init() {
@@ -40,6 +43,7 @@ class dog{
         self.dogVaccination = []
         self.dogImage = []
         self.tipsTricks = []
+        self.dogImageRef = []
     }
     
     func getDogName() -> String {
@@ -73,10 +77,11 @@ class dog{
         
         var count:Int = 0
         for image in dogImage{
-            let imagesRef = storageRef.child("\(Auth.auth().currentUser?.uid)/DogImage/\(dogName)")
+            //let imagesRef = storageRef.child("\(Auth.auth().currentUser?.uid)/DogImage/\(dogName)")
             guard let imageData = UIImageJPEGRepresentation(image, 1) else {return}
-            let riversRef = storageRef.child("\(Auth.auth().currentUser?.uid)/DogImage/\(dogName)/dogPic\(count).jpg")
-            
+            let imageName = NSUUID().uuidString
+            let riversRef = storageRef.child("/Dogs/\(dogName)/\(imageName).jpg")
+            self.ref.child("users/\(Auth.auth().currentUser!.uid)/dogs/\(dogName)/dogImage\(count)").setValue(imageName)
             // Upload the file to the path "images/rivers.jpg"
             let uploadTask = riversRef.putData(imageData, metadata: nil) { (metadata, error) in
                 guard let metadata = metadata else {
