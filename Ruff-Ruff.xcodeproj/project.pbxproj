@@ -154,10 +154,7 @@
 				6E9657F420D39A0F00027CCC /* dog.swift */,
 				6E5D9EB720F7184F001C7C5C /* FirebaseImporter.swift */,
 				6EDC7F1F20F1E74500EFF1C0 /* OptionVC.swift */,
-				6E4B14CD20E5E7A900AFA73F /* PetDetailsViewController.swift */,
-				6EDC7F1920EF400600EFF1C0 /* ParentMainViewController.swift */,
-				6EDC7F1D20F1BF3E00EFF1C0 /* ParentCollectionViewCell.swift */,
-				6EDC7F1B20EF48A200EFF1C0 /* AddDogsVC.swift */,
+				6E4E42D920FAEF47004D41F8 /* Parent */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -170,6 +167,17 @@
 				C08E32B30D887E4093FD1170 /* Pods_Ruff_RuffUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E4E42D920FAEF47004D41F8 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				6E4B14CD20E5E7A900AFA73F /* PetDetailsViewController.swift */,
+				6EDC7F1D20F1BF3E00EFF1C0 /* ParentCollectionViewCell.swift */,
+				6EDC7F1920EF400600EFF1C0 /* ParentMainViewController.swift */,
+				6EDC7F1B20EF48A200EFF1C0 /* AddDogsVC.swift */,
+			);
+			path = Parent;
 			sourceTree = "<group>";
 		};
 		6E5D9EB420F70E62001C7C5C /* Supporting Codes */ = {

@@ -46,6 +46,7 @@ class AddDogsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         newDog.setDogBreed(dogBreed: dogBreed.text!)
         newDog.setDogAge(dogAge: dogAge.text!)
         newDog.setDogImage(dogImage: dogImage)
+        
         dismiss(animated: true, completion: nil)
     }
     

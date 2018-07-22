@@ -17,7 +17,7 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var collectionView: UICollectionView!
     var dogs:Array<dog> = []
     var dogImage:Array<UIImage> = []
-    //var imageref:UIImage?
+    var currentDog:dog = dog()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,29 +33,6 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
             print("printing" + dogIm)
             //dogData.dogImage.append(contentsOf: dogImage)
             self.dogs.append(dogData)
-            
-            
-            
-            /*
-            
-            //let islandRef = storageRef.child("/rivers.jpg")
-            let islandRef = self.storageRef.child("Dogs/\("mickey")/DD911F06-91A6-46DE-AB22-032FFC304039.jpg")
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            islandRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
-                if let error = error {
-                    print("failed to get image2")
-                    //image = UIImage(named: "imagePlaceholder")!
-                    // Uh-oh, an error occurred!
-                } else {
-                    print("succeeded2")
-                    // Data for "images/island.jpg" is returned
-                    let aimage = UIImage(data: data!)!
-                    self.dogImage.append(aimage)
-
-                }
-                
-            }*/
-            
             
             
             self.collectionView!.reloadData()
@@ -74,7 +51,7 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var data = self.dogs[indexPath.row]
-        
+        currentDog = self.dogs[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         let imageView = cell.viewWithTag(1) as! UIImageView
         let nameLabel = cell.viewWithTag(2) as! UILabel
@@ -102,16 +79,23 @@ class ParentMainViewController: UIViewController, UICollectionViewDataSource, UI
                 imageView.image = self.dogs[indexPath.row].dogImage[0]
                 
             }
-            
-
         }
-        
-        
-        //imageView.image = imageref
-        //cell.reloadInputViews()
-        //collectionView.reloadData()
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Start", bundle: nil)
+        let desVC = mainStoryBoard.instantiateViewController(withIdentifier: "PetDetailsViewController") as! PetDetailsViewController
+        desVC.nameData = self.dogs[indexPath.row].dogName
+        //desVC.priceData = self.dogs[indexPath.row]
+        desVC.ageData = self.dogs[indexPath.row].dogAge
+        //desVC.descriptionData = self.dogs[indexPath.row].dogDescriptop
+        desVC.dogImage = self.dogs[indexPath.row].dogImage
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
+    
+    
     
     @IBAction func logoutClicked(_ sender: Any) {
         let firebaseAuth = Auth.auth()
